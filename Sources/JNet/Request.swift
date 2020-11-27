@@ -2,7 +2,7 @@ import Foundation
 
 // MARK: - RequestFailure
 
-public typealias RequestFailure = ((Int, Any?) -> Void)?
+public typealias RequestFailure = ((Int, Error) -> Void)?
 
 // MARK: - Request
 
