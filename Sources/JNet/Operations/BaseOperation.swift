@@ -2,12 +2,12 @@ import Foundation
 
 // MARK: - OperationState
 
-enum OperationState: Equatable {
+public enum OperationState: Equatable {
     case ready, executing, finished
 
     // MARK: Key Paths
 
-    func keyPath() -> String {
+    public func keyPath() -> String {
         switch self {
         case .ready:
             return "isReady"
@@ -25,7 +25,7 @@ open class BaseOperation: Operation {
 
     // MARK: Properties
 
-    var state: OperationState = .ready {
+    public var state: OperationState = .ready {
         // send KVO triggers for state and anything that observes isReady, isExecuting, etc.
         willSet {
             willChangeValue(forKey: newValue.keyPath())
