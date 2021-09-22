@@ -3,7 +3,7 @@ import Foundation
 // MARK: - Fetcher
 
 /// An object which abstracts away the complexity of requesting data from (paginated) API endpoints.
-public class Fetcher<ResponseType: Codable, RecordType: Codable> {
+open class Fetcher<ResponseType: Codable, RecordType: Codable> {
 
     // MARK: Properties
 
