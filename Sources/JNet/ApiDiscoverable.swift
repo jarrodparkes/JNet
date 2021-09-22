@@ -26,9 +26,17 @@ public protocol APIJsonable: ApiDiscoverable {
 // MARK: - APIJsonable (Defaults)
 
 extension APIJsonable {
-    func request<T: Codable>(_ request: Request,
-                             success: ((T) -> Void)?,
-                             failure: RequestFailure) -> FetchOperation? {
+    /// Starts an API request and returns the queued `FetchOperation`.
+    /// - Parameters:
+    ///   - request: Defines the components of the HTTP request.
+    ///   - success: Handler if the HTTP request succeeds.
+    ///   - failure: Handler if the HTTP request fails.
+    /// - Returns: A queued `FetchOperation` that can be manipulated from the call site. For example,
+    /// the call site may decide the operation needs to be cancelled if the user navigates away
+    /// from call site's context.
+    public func request<T: Codable>(_ request: Request,
+                                    success: ((T) -> Void)?,
+                                    failure: RequestFailure) -> FetchOperation? {
         if let urlRequest = request.urlRequest(forAPI: self) {
             return self.request(urlRequest, success: success, failure: failure)
         } else {
