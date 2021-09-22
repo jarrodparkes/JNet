@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		A914798626FB6FE700A9CA80 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914798526FB6FE700A9CA80 /* Fetcher.swift */; };
 		OBJ_35 /* ApiDiscoverable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* ApiDiscoverable.swift */; };
 		OBJ_36 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* ApiError.swift */; };
 		OBJ_37 /* Data+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Data+Helpers.swift */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A914798526FB6FE700A9CA80 /* Fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
 		"JNet::JNet::Product" /* JNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"JNet::JNetTests::Product" /* JNetTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = JNetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
@@ -142,7 +144,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -151,7 +153,6 @@
 				OBJ_26 /* Products */,
 				OBJ_29 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -169,6 +170,7 @@
 				OBJ_10 /* ApiError.swift */,
 				OBJ_15 /* HttpMethod.swift */,
 				OBJ_21 /* Request.swift */,
+				A914798526FB6FE700A9CA80 /* Fetcher.swift */,
 				OBJ_11 /* Extensions */,
 				OBJ_16 /* Operations */,
 			);
@@ -243,7 +245,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_26 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -287,6 +289,7 @@
 				OBJ_37 /* Data+Helpers.swift in Sources */,
 				OBJ_38 /* HTTPURLResponse+Helpers.swift in Sources */,
 				OBJ_39 /* URLSession+Helpers.swift in Sources */,
+				A914798626FB6FE700A9CA80 /* Fetcher.swift in Sources */,
 				OBJ_40 /* HttpMethod.swift in Sources */,
 				OBJ_41 /* BaseOperation.swift in Sources */,
 				OBJ_42 /* FetchOperation.swift in Sources */,
