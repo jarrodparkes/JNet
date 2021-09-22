@@ -1,5 +1,5 @@
-import XCTest
 @testable import JNet
+import XCTest
 
 final class JNetTests: XCTestCase {
     func testExample() {
@@ -7,6 +7,6 @@ final class JNetTests: XCTestCase {
     }
 
     static var allTests = [
-        ("testExample", testExample),
+        ("testExample", testExample)
     ]
 }

@@ -8,7 +8,7 @@ let package = Package(
     dependencies: [],
     targets: [
         .target(name: "JNet", dependencies: []),
-        .testTarget(name: "JNetTests", dependencies: ["JNet"]),
+        .testTarget(name: "JNetTests", dependencies: ["JNet"])
     ],
     swiftLanguageVersions: [.v5]
 )

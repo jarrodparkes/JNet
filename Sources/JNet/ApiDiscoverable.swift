@@ -2,11 +2,12 @@ import Foundation
 
 // MARK: - ApiDiscoverable
 
-public protocol ApiDiscoverable: class {
+public protocol ApiDiscoverable: AnyObject {
     var scheme: String { get }
     var host: String { get }
     var subPath: String? { get }
 
+    var httpHeaderFields: [String: String] { get }
     var dateEncodingStrategy: JSONEncoder.DateEncodingStrategy { get }
 }
 

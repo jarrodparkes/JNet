@@ -1,0 +1,26 @@
+opt_in_rules:
+  - empty_count
+  - force_unwrapping
+  - missing_docs
+  - multiline_arguments
+  - multiline_function_chains
+  - multiline_parameters
+  - private_action
+  - private_outlet
+  - redundant_type_annotation
+  - sorted_first_last
+  - sorted_imports
+  - unavailable_function
+  - contains_over_filter_count
+  - contains_over_filter_is_empty
+  - empty_collection_literal
+identifier_name:
+  min_length: 2
+missing_docs:
+  warning:
+    - open
+    - public
+excluded:
+  - vendor
+  - tmp
+  - .build

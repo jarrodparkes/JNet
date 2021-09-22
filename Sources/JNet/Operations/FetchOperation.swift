@@ -2,7 +2,7 @@ import Foundation
 
 // MARK: - Fetchable
 
-protocol Fetchable: class {
+protocol Fetchable: AnyObject {
     var request: URLRequest { get }
     var data: Data? { get set }
     var response: URLResponse? { get set }
