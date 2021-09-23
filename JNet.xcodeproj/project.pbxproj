@@ -22,6 +22,17 @@
 
 /* Begin PBXBuildFile section */
 		A914798626FB6FE700A9CA80 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914798526FB6FE700A9CA80 /* Fetcher.swift */; };
+		A9188DDC26FCBE78002D312C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DDB26FCBE78002D312C /* main.swift */; };
+		A9188DE126FCBE80002D312C /* JNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "JNet::JNet::Product" /* JNet.framework */; };
+		A9188DE226FCBE80002D312C /* JNet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "JNet::JNet::Product" /* JNet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A9188DE926FCC3BE002D312C /* PokemonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DE826FCC3BE002D312C /* PokemonAPI.swift */; };
+		A9188DEB26FCC3D8002D312C /* PokemonRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DEA26FCC3D8002D312C /* PokemonRequest.swift */; };
+		A9188DED26FCC3F3002D312C /* PokemonFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DEC26FCC3F3002D312C /* PokemonFetcher.swift */; };
+		A9188DEF26FCC408002D312C /* PokemonModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DEE26FCC408002D312C /* PokemonModels.swift */; };
+		A9188DF226FCC46E002D312C /* StarWarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DF126FCC46E002D312C /* StarWarsAPI.swift */; };
+		A9188DF426FCC475002D312C /* StarWarsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DF326FCC475002D312C /* StarWarsRequest.swift */; };
+		A9188DF626FCC47C002D312C /* StarWarsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DF526FCC47C002D312C /* StarWarsFetcher.swift */; };
+		A9188DF826FCC484002D312C /* StarWarsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DF726FCC484002D312C /* StarWarsModels.swift */; };
 		OBJ_35 /* ApiDiscoverable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* ApiDiscoverable.swift */; };
 		OBJ_36 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* ApiError.swift */; };
 		OBJ_37 /* Data+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Data+Helpers.swift */; };
@@ -40,6 +51,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A9188DE326FCBE80002D312C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "JNet::JNet";
+			remoteInfo = JNet;
+		};
 		A9B6140C26FACA9F00744183 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
@@ -56,8 +74,42 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A9188DD726FCBE78002D312C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		A9188DE526FCBE81002D312C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A9188DE226FCBE80002D312C /* JNet.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		A914798526FB6FE700A9CA80 /* Fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
+		A9188DD926FCBE78002D312C /* JNetExample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = JNetExample; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9188DDB26FCBE78002D312C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A9188DE626FCBF24002D312C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9188DE826FCC3BE002D312C /* PokemonAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonAPI.swift; sourceTree = "<group>"; };
+		A9188DEA26FCC3D8002D312C /* PokemonRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRequest.swift; sourceTree = "<group>"; };
+		A9188DEC26FCC3F3002D312C /* PokemonFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonFetcher.swift; sourceTree = "<group>"; };
+		A9188DEE26FCC408002D312C /* PokemonModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonModels.swift; sourceTree = "<group>"; };
+		A9188DF126FCC46E002D312C /* StarWarsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAPI.swift; sourceTree = "<group>"; };
+		A9188DF326FCC475002D312C /* StarWarsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsRequest.swift; sourceTree = "<group>"; };
+		A9188DF526FCC47C002D312C /* StarWarsFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsFetcher.swift; sourceTree = "<group>"; };
+		A9188DF726FCC484002D312C /* StarWarsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsModels.swift; sourceTree = "<group>"; };
 		"JNet::JNet::Product" /* JNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"JNet::JNetTests::Product" /* JNetTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = JNetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
@@ -78,6 +130,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A9188DD626FCBE78002D312C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9188DE126FCBE80002D312C /* JNet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		OBJ_46 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
@@ -96,6 +156,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A9188DDA26FCBE78002D312C /* JNetExample */ = {
+			isa = PBXGroup;
+			children = (
+				A9188DF026FCC45D002D312C /* StarWars */,
+				A9188DE726FCC3B3002D312C /* Pokemon */,
+				A9188DDB26FCBE78002D312C /* main.swift */,
+				A9188DE626FCBF24002D312C /* Info.plist */,
+			);
+			path = JNetExample;
+			sourceTree = "<group>";
+		};
+		A9188DE026FCBE80002D312C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A9188DE726FCC3B3002D312C /* Pokemon */ = {
+			isa = PBXGroup;
+			children = (
+				A9188DE826FCC3BE002D312C /* PokemonAPI.swift */,
+				A9188DEA26FCC3D8002D312C /* PokemonRequest.swift */,
+				A9188DEC26FCC3F3002D312C /* PokemonFetcher.swift */,
+				A9188DEE26FCC408002D312C /* PokemonModels.swift */,
+			);
+			path = Pokemon;
+			sourceTree = "<group>";
+		};
+		A9188DF026FCC45D002D312C /* StarWars */ = {
+			isa = PBXGroup;
+			children = (
+				A9188DF126FCC46E002D312C /* StarWarsAPI.swift */,
+				A9188DF326FCC475002D312C /* StarWarsRequest.swift */,
+				A9188DF526FCC47C002D312C /* StarWarsFetcher.swift */,
+				A9188DF726FCC484002D312C /* StarWarsModels.swift */,
+			);
+			path = StarWars;
+			sourceTree = "<group>";
+		};
 		OBJ_11 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +240,7 @@
 			children = (
 				"JNet::JNet::Product" /* JNet.framework */,
 				"JNet::JNetTests::Product" /* JNetTests.xctest */,
+				A9188DD926FCBE78002D312C /* JNetExample */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -148,10 +249,12 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
+				A9188DDA26FCBE78002D312C /* JNetExample */,
 				OBJ_7 /* Sources */,
 				OBJ_22 /* Tests */,
 				OBJ_26 /* Products */,
 				OBJ_29 /* README.md */,
+				A9188DE026FCBE80002D312C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,6 +284,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A9188DD826FCBE78002D312C /* JNetExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9188DDF26FCBE78002D312C /* Build configuration list for PBXNativeTarget "JNetExample" */;
+			buildPhases = (
+				A9188DD526FCBE78002D312C /* Sources */,
+				A9188DD626FCBE78002D312C /* Frameworks */,
+				A9188DD726FCBE78002D312C /* CopyFiles */,
+				A9188DE526FCBE81002D312C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9188DE426FCBE80002D312C /* PBXTargetDependency */,
+			);
+			name = JNetExample;
+			productName = JNetExample;
+			productReference = A9188DD926FCBE78002D312C /* JNetExample */;
+			productType = "com.apple.product-type.tool";
+		};
 		"JNet::JNet" /* JNet */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_31 /* Build configuration list for PBXNativeTarget "JNet" */;
@@ -236,7 +358,19 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 9999;
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					A9188DD826FCBE78002D312C = {
+						CreatedOnToolsVersion = 12.5;
+						DevelopmentTeam = 46AXCNRKGY;
+						ProvisioningStyle = Automatic;
+					};
+					"JNet::JNet" = {
+						DevelopmentTeam = 46AXCNRKGY;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "JNet" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -254,6 +388,7 @@
 				"JNet::SwiftPMPackageDescription" /* JNetPackageDescription */,
 				"JNet::JNetPackageTests::ProductTarget" /* JNetPackageTests */,
 				"JNet::JNetTests" /* JNetTests */,
+				A9188DD826FCBE78002D312C /* JNetExample */,
 			);
 		};
 /* End PBXProject section */
@@ -280,6 +415,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A9188DD526FCBE78002D312C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9188DF826FCC484002D312C /* StarWarsModels.swift in Sources */,
+				A9188DF626FCC47C002D312C /* StarWarsFetcher.swift in Sources */,
+				A9188DF426FCC475002D312C /* StarWarsRequest.swift in Sources */,
+				A9188DEF26FCC408002D312C /* PokemonModels.swift in Sources */,
+				A9188DE926FCC3BE002D312C /* PokemonAPI.swift in Sources */,
+				A9188DED26FCC3F3002D312C /* PokemonFetcher.swift in Sources */,
+				A9188DF226FCC46E002D312C /* StarWarsAPI.swift in Sources */,
+				A9188DDC26FCBE78002D312C /* main.swift in Sources */,
+				A9188DEB26FCC3D8002D312C /* PokemonRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		OBJ_34 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
@@ -319,6 +470,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A9188DE426FCBE80002D312C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "JNet::JNet" /* JNet */;
+			targetProxy = A9188DE326FCBE80002D312C /* PBXContainerItemProxy */;
+		};
 		OBJ_57 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "JNet::JNetTests" /* JNetTests */;
@@ -332,6 +488,129 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		A9188DDD26FCBE78002D312C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 46AXCNRKGY;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/JNetExample/Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jarrodparkes.JNetExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A9188DDE26FCBE78002D312C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 46AXCNRKGY;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/JNetExample/Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jarrodparkes.JNetExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		OBJ_3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -363,7 +642,10 @@
 		OBJ_32 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 46AXCNRKGY;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -381,6 +663,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = JNet;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
@@ -393,7 +677,10 @@
 		OBJ_33 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 46AXCNRKGY;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -411,6 +698,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = JNet;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
@@ -530,6 +819,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A9188DDF26FCBE78002D312C /* Build configuration list for PBXNativeTarget "JNetExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9188DDD26FCBE78002D312C /* Debug */,
+				A9188DDE26FCBE78002D312C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		OBJ_2 /* Build configuration list for PBXProject "JNet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
