@@ -66,7 +66,7 @@ public extension Request {
             urlRequest.httpMethod = httpMethod.rawValue
 
             // headers...
-            let allHeaders = httpHeaders.merging(api.httpHeaderFields) { (_, apiHeaders) in apiHeaders }
+            let allHeaders = httpHeaders.merging(api.httpHeaderFields) { (requestHeaders, _) in requestHeaders }
             for (key, value) in allHeaders {
                 urlRequest.addValue(value, forHTTPHeaderField: key)
             }
