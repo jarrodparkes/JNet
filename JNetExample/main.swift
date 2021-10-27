@@ -7,10 +7,14 @@
 
 import Foundation
 
-// let pokemonFetcher = PokemonFetcher()
-// pokemonFetcher.fetch()
+let fetcherLogger = FetcherLogger()
 
- let starWarsFetcher = StarWarsFetcher()
- starWarsFetcher.fetch()
+let pokemonFetcher = PokemonFetcher()
+pokemonFetcher.delegate = fetcherLogger
+pokemonFetcher.fetch()
+
+// let starWarsFetcher = StarWarsFetcher()
+// starWarsFetcher.delegate = fetcherLogger
+// starWarsFetcher.fetch()
 
 RunLoop.main.run()

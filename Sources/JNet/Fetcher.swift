@@ -1,5 +1,13 @@
 import Foundation
 
+// MARK: - FetcherDelegate
+
+public protocol FetcherDelegate: AnyObject {
+    func fetcherStarted(firstPage: Bool)
+    func fetcherFetchedNewRecords(records: [Codable], firstPage: Bool)
+    func fetcherFailed(statusCode: Int, error: Error)
+}
+
 // MARK: - Fetcher
 
 /// An object which abstracts away the complexity of requesting data from (paginated) API endpoints.
@@ -31,6 +39,9 @@ open class Fetcher<ResponseType: Codable, RecordType: Codable> {
             return false
         }
     }
+
+    /// An object that can handle fetch callbacks.
+    public weak var delegate: FetcherDelegate?
 
     // MARK: Initializer
 
@@ -166,19 +177,25 @@ open class Fetcher<ResponseType: Codable, RecordType: Codable> {
 
     /// A callback when a new fetch starts.
     /// - Parameter firstPage: Is this fetch for the first page of records?
-    open func fetchStarted(firstPage: Bool) {}
+    open func fetchStarted(firstPage: Bool) {
+        delegate?.fetcherStarted(firstPage: firstPage)
+    }
 
     /// A callback when new records have been fetched.
     /// - Parameters:
     ///   - records: An array of newly fetched records.
     ///   - firstPage: Is this fetch for the first page of records?
-    open func fetchedNewRecords(records: [RecordType], firstPage: Bool) {}
+    open func fetchedNewRecords(records: [RecordType], firstPage: Bool) {
+        delegate?.fetcherFetchedNewRecords(records: records, firstPage: firstPage)
+    }
 
     /// A callback when a fetch fails.
     /// - Parameters:
     ///   - statusCode: The HTTP status code for the failure (e.g. 422).
     ///   - error: The error for the failure.
-    open func fetchFailed(statusCode: Int, error: Error) {}
+    open func fetchFailed(statusCode: Int, error: Error) {
+        delegate?.fetcherFailed(statusCode: statusCode, error: error)
+    }
 
     /// Returns a dictionary of key/value pairs that will be used to set/override HTTP headers
     /// for the next fetch.

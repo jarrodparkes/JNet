@@ -18,22 +18,10 @@ class StarWarsFetcher: Fetcher<StarWarsResult<StarWarsPerson>, StarWarsPerson> {
         super.init(api: StarWarsAPI(), coreRequest: StarWarsRequest.people)
     }
 
-    // MARK: Paginator
+    // MARK: Fetcher
 
     override func responseToRecords(response: StarWarsResult<StarWarsPerson>) -> [StarWarsPerson] {
         return response.results
-    }
-
-    override func fetchStarted(firstPage: Bool) {
-        print("fetchStarted")
-    }
-
-    override func fetchedNewRecords(records: [StarWarsPerson], firstPage: Bool) {
-        print("fetchedNewRecords: \(records)")
-    }
-
-    override func fetchFailed(statusCode: Int, error: Error) {
-        print("fetchFailed (\(statusCode)): \(error)")
     }
 
     override func nextRequestQueryItems(response: StarWarsResult<StarWarsPerson>,

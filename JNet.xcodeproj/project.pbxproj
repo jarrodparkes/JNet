@@ -33,6 +33,7 @@
 		A9188DF426FCC475002D312C /* StarWarsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DF326FCC475002D312C /* StarWarsRequest.swift */; };
 		A9188DF626FCC47C002D312C /* StarWarsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DF526FCC47C002D312C /* StarWarsFetcher.swift */; };
 		A9188DF826FCC484002D312C /* StarWarsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DF726FCC484002D312C /* StarWarsModels.swift */; };
+		A948F2D62729F05A00E427E3 /* FetcherLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A948F2D52729F05A00E427E3 /* FetcherLogger.swift */; };
 		OBJ_35 /* ApiDiscoverable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* ApiDiscoverable.swift */; };
 		OBJ_36 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* ApiError.swift */; };
 		OBJ_37 /* Data+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Data+Helpers.swift */; };
@@ -110,6 +111,7 @@
 		A9188DF326FCC475002D312C /* StarWarsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsRequest.swift; sourceTree = "<group>"; };
 		A9188DF526FCC47C002D312C /* StarWarsFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsFetcher.swift; sourceTree = "<group>"; };
 		A9188DF726FCC484002D312C /* StarWarsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsModels.swift; sourceTree = "<group>"; };
+		A948F2D52729F05A00E427E3 /* FetcherLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherLogger.swift; sourceTree = "<group>"; };
 		"JNet::JNet::Product" /* JNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"JNet::JNetTests::Product" /* JNetTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = JNetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			children = (
 				A9188DF026FCC45D002D312C /* StarWars */,
 				A9188DE726FCC3B3002D312C /* Pokemon */,
+				A948F2D52729F05A00E427E3 /* FetcherLogger.swift */,
 				A9188DDB26FCBE78002D312C /* main.swift */,
 				A9188DE626FCBF24002D312C /* Info.plist */,
 			);
@@ -420,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9188DF826FCC484002D312C /* StarWarsModels.swift in Sources */,
+				A948F2D62729F05A00E427E3 /* FetcherLogger.swift in Sources */,
 				A9188DF626FCC47C002D312C /* StarWarsFetcher.swift in Sources */,
 				A9188DF426FCC475002D312C /* StarWarsRequest.swift in Sources */,
 				A9188DEF26FCC408002D312C /* PokemonModels.swift in Sources */,
@@ -656,7 +660,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.2.0;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -691,7 +695,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.2.0;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";

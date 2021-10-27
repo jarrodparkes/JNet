@@ -18,22 +18,10 @@ class PokemonFetcher: Fetcher<PokemonResult<Pokemon>, Pokemon> {
         super.init(api: PokemonAPI(), coreRequest: PokemonRequest.pokemon)
     }
 
-    // MARK: Paginator
+    // MARK: Fetcher
 
     override func responseToRecords(response: PokemonResult<Pokemon>) -> [Pokemon] {
         return response.results
-    }
-
-    override func fetchStarted(firstPage: Bool) {
-        print("fetchStarted")
-    }
-
-    override func fetchedNewRecords(records: [Pokemon], firstPage: Bool) {
-        print("fetchedNewRecords: \(records)")
-    }
-
-    override func fetchFailed(statusCode: Int, error: Error) {
-        print("fetchFailed (\(statusCode)): \(error)")
     }
 
     override func nextRequestQueryItems(response: PokemonResult<Pokemon>,
