@@ -9,12 +9,12 @@ import Foundation
 
 let fetcherLogger = FetcherLogger()
 
-let pokemonFetcher = PokemonFetcher()
-pokemonFetcher.delegate = fetcherLogger
-pokemonFetcher.fetch()
+// let pokemonFetcher = PokemonFetcher()
+// pokemonFetcher.delegate = fetcherLogger
+// pokemonFetcher.fetch()
 
-// let starWarsFetcher = StarWarsFetcher()
-// starWarsFetcher.delegate = fetcherLogger
-// starWarsFetcher.fetch()
+let starWarsFetcher = StarWarsFetcher()
+starWarsFetcher.delegate = fetcherLogger
+starWarsFetcher.fetch()
 
 RunLoop.main.run()

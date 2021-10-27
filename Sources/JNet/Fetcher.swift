@@ -4,7 +4,7 @@ import Foundation
 
 public protocol FetcherDelegate: AnyObject {
     func fetcherStarted(firstPage: Bool)
-    func fetcherFetchedNewRecords(records: [Codable], firstPage: Bool)
+    func fetcherFetchedNewRecords(records: [Codable], firstPage: Bool, fetchedAllRecords: Bool)
     func fetcherFailed(statusCode: Int, error: Error)
 }
 
@@ -186,7 +186,9 @@ open class Fetcher<ResponseType: Codable, RecordType: Codable> {
     ///   - records: An array of newly fetched records.
     ///   - firstPage: Is this fetch for the first page of records?
     open func fetchedNewRecords(records: [RecordType], firstPage: Bool) {
-        delegate?.fetcherFetchedNewRecords(records: records, firstPage: firstPage)
+        delegate?.fetcherFetchedNewRecords(records: records,
+                                           firstPage: firstPage,
+                                           fetchedAllRecords: fetchedAllRecords)
     }
 
     /// A callback when a fetch fails.

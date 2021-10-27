@@ -11,14 +11,14 @@ import JNet
 
 class FetcherLogger: FetcherDelegate {
     func fetcherStarted(firstPage: Bool) {
-        print("fetcherStarted:firstPage:\(firstPage)")
+        print("started:firstPage:\(firstPage)")
     }
 
-    func fetcherFetchedNewRecords(records: [Codable], firstPage: Bool) {
-        print("fetcherFetchedNewRecords:records:\(records):firstPage:\(firstPage)")
+    func fetcherFetchedNewRecords(records: [Codable], firstPage: Bool, fetchedAllRecords: Bool) {
+        print("newRecords:records:\(records):firstPage:\(firstPage):fetchedAllRecords:\(fetchedAllRecords)")
     }
 
     func fetcherFailed(statusCode: Int, error: Error) {
-        print("fetcherFailed:statusCode:\(statusCode):error:\(error)")
+        print("failed:statusCode:\(statusCode):error:\(error)")
     }
 }
