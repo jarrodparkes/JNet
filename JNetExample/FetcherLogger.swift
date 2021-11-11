@@ -10,15 +10,19 @@ import JNet
 // MARK: - FetcherLogger: FetcherDelegate
 
 class FetcherLogger: FetcherDelegate {
-    func fetcherStarted(firstPage: Bool) {
-        print("started:firstPage:\(firstPage)")
+    func fetcherStarted(fetcherTag: Int, firstPage: Bool) {
+        print("started:fetcherTag:\(fetcherTag):firstPage:\(firstPage)")
     }
 
-    func fetcherFetchedNewRecords(records: [Codable], firstPage: Bool, fetchedAllRecords: Bool) {
-        print("newRecords:records:\(records):firstPage:\(firstPage):fetchedAllRecords:\(fetchedAllRecords)")
+    func fetcherFetchedNewRecords(fetcherTag: Int,
+                                  records: [Codable],
+                                  firstPage: Bool,
+                                  fetchedAllRecords: Bool) {
+        print("newRecords:fetcherTag:\(fetcherTag):records:\(records):" +
+                "firstPage:\(firstPage):fetchedAllRecords:\(fetchedAllRecords)")
     }
 
-    func fetcherFailed(statusCode: Int, error: Error) {
-        print("failed:statusCode:\(statusCode):error:\(error)")
+    func fetcherFailed(fetcherTag: Int, statusCode: Int, error: Error) {
+        print("failed:fetcherTag:\(fetcherTag):statusCode:\(statusCode):error:\(error)")
     }
 }

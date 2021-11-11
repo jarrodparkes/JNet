@@ -3,9 +3,12 @@ import Foundation
 // MARK: - FetcherDelegate
 
 public protocol FetcherDelegate: AnyObject {
-    func fetcherStarted(firstPage: Bool)
-    func fetcherFetchedNewRecords(records: [Codable], firstPage: Bool, fetchedAllRecords: Bool)
-    func fetcherFailed(statusCode: Int, error: Error)
+    func fetcherStarted(fetcherTag: Int, firstPage: Bool)
+    func fetcherFetchedNewRecords(fetcherTag: Int,
+                                  records: [Codable],
+                                  firstPage: Bool,
+                                  fetchedAllRecords: Bool)
+    func fetcherFailed(fetcherTag: Int, statusCode: Int, error: Error)
 }
 
 // MARK: - Fetcher
@@ -42,6 +45,9 @@ open class Fetcher<ResponseType: Codable, RecordType: Codable> {
 
     /// An object that can handle fetch callbacks.
     public weak var delegate: FetcherDelegate?
+
+    /// An identifying tag.
+    public var tag: Int = 0
 
     // MARK: Initializer
 
@@ -178,7 +184,7 @@ open class Fetcher<ResponseType: Codable, RecordType: Codable> {
     /// A callback when a new fetch starts.
     /// - Parameter firstPage: Is this fetch for the first page of records?
     open func fetchStarted(firstPage: Bool) {
-        delegate?.fetcherStarted(firstPage: firstPage)
+        delegate?.fetcherStarted(fetcherTag: tag, firstPage: firstPage)
     }
 
     /// A callback when new records have been fetched.
@@ -186,7 +192,8 @@ open class Fetcher<ResponseType: Codable, RecordType: Codable> {
     ///   - records: An array of newly fetched records.
     ///   - firstPage: Is this fetch for the first page of records?
     open func fetchedNewRecords(records: [RecordType], firstPage: Bool) {
-        delegate?.fetcherFetchedNewRecords(records: records,
+        delegate?.fetcherFetchedNewRecords(fetcherTag: tag,
+                                           records: records,
                                            firstPage: firstPage,
                                            fetchedAllRecords: fetchedAllRecords)
     }
@@ -196,7 +203,7 @@ open class Fetcher<ResponseType: Codable, RecordType: Codable> {
     ///   - statusCode: The HTTP status code for the failure (e.g. 422).
     ///   - error: The error for the failure.
     open func fetchFailed(statusCode: Int, error: Error) {
-        delegate?.fetcherFailed(statusCode: statusCode, error: error)
+        delegate?.fetcherFailed(fetcherTag: tag, statusCode: statusCode, error: error)
     }
 
     /// Returns a dictionary of key/value pairs that will be used to set/override HTTP headers
