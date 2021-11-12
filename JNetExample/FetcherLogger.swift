@@ -15,7 +15,7 @@ class FetcherLogger: FetcherDelegate {
     }
 
     func fetcherFetchedNewRecords(fetcherTag: Int,
-                                  records: [Codable],
+                                  records: [UUIDIdentifiable],
                                   firstPage: Bool,
                                   fetchedAllRecords: Bool) {
         print("newRecords:fetcherTag:\(fetcherTag):records:\(records):" +

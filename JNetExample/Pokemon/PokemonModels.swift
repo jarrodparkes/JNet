@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import JNet
 
 // MARK: - PokemonResult
 
@@ -18,7 +19,9 @@ struct PokemonResult<T: Codable>: Codable {
 
 // MARK: - Pokemon
 
-struct Pokemon: Codable {
+struct Pokemon: UUIDIdentifiable {
     let name: String
     let url: String
+
+    var id: UUID { return UUID() }
 }

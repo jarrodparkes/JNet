@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import JNet
 
 // MARK: - StarWarsResult
 
@@ -18,7 +19,7 @@ struct StarWarsResult<T: Codable>: Codable {
 
 // MARK: - StarWarsPerson
 
-struct StarWarsPerson: Codable {
+struct StarWarsPerson: UUIDIdentifiable {
     let name, height, mass, hairColor: String
     let skinColor, eyeColor, birthYear: String
     let gender: StarWarsGender
@@ -26,6 +27,8 @@ struct StarWarsPerson: Codable {
     let films, species, vehicles, starships: [String]
     let created, edited: String
     let url: String
+
+    var id: UUID { return UUID() }
 
     enum CodingKeys: String, CodingKey {
         case name, height, mass

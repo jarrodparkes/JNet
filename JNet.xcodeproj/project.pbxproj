@@ -34,6 +34,7 @@
 		A9188DF626FCC47C002D312C /* StarWarsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DF526FCC47C002D312C /* StarWarsFetcher.swift */; };
 		A9188DF826FCC484002D312C /* StarWarsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DF726FCC484002D312C /* StarWarsModels.swift */; };
 		A948F2D62729F05A00E427E3 /* FetcherLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A948F2D52729F05A00E427E3 /* FetcherLogger.swift */; };
+		A95C6B04273EC8FD0066ADA9 /* Array+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95C6B03273EC8FD0066ADA9 /* Array+Helpers.swift */; };
 		OBJ_35 /* ApiDiscoverable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* ApiDiscoverable.swift */; };
 		OBJ_36 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* ApiError.swift */; };
 		OBJ_37 /* Data+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Data+Helpers.swift */; };
@@ -112,6 +113,7 @@
 		A9188DF526FCC47C002D312C /* StarWarsFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsFetcher.swift; sourceTree = "<group>"; };
 		A9188DF726FCC484002D312C /* StarWarsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsModels.swift; sourceTree = "<group>"; };
 		A948F2D52729F05A00E427E3 /* FetcherLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherLogger.swift; sourceTree = "<group>"; };
+		A95C6B03273EC8FD0066ADA9 /* Array+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Helpers.swift"; sourceTree = "<group>"; };
 		"JNet::JNet::Product" /* JNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"JNet::JNetTests::Product" /* JNetTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = JNetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 		OBJ_11 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A95C6B03273EC8FD0066ADA9 /* Array+Helpers.swift */,
 				OBJ_12 /* Data+Helpers.swift */,
 				OBJ_13 /* HTTPURLResponse+Helpers.swift */,
 				OBJ_14 /* URLSession+Helpers.swift */,
@@ -444,6 +447,7 @@
 				OBJ_37 /* Data+Helpers.swift in Sources */,
 				OBJ_38 /* HTTPURLResponse+Helpers.swift in Sources */,
 				OBJ_39 /* URLSession+Helpers.swift in Sources */,
+				A95C6B04273EC8FD0066ADA9 /* Array+Helpers.swift in Sources */,
 				A914798626FB6FE700A9CA80 /* Fetcher.swift in Sources */,
 				OBJ_40 /* HttpMethod.swift in Sources */,
 				OBJ_41 /* BaseOperation.swift in Sources */,

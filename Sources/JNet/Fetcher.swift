@@ -1,11 +1,17 @@
 import Foundation
 
+// MARK: - UUIDIdentifiable: Codable
+
+public protocol UUIDIdentifiable: Codable {
+    var id: UUID { get }
+}
+
 // MARK: - FetcherDelegate
 
 public protocol FetcherDelegate: AnyObject {
     func fetcherStarted(fetcherTag: Int, firstPage: Bool)
     func fetcherFetchedNewRecords(fetcherTag: Int,
-                                  records: [Codable],
+                                  records: [UUIDIdentifiable],
                                   firstPage: Bool,
                                   fetchedAllRecords: Bool)
     func fetcherFailed(fetcherTag: Int, statusCode: Int, error: Error)
@@ -14,7 +20,7 @@ public protocol FetcherDelegate: AnyObject {
 // MARK: - Fetcher
 
 /// An object which abstracts away the complexity of requesting data from (paginated) API endpoints.
-open class Fetcher<ResponseType: Codable, RecordType: Codable> {
+open class Fetcher<ResponseType: Codable, RecordType: UUIDIdentifiable> {
 
     // MARK: Properties
 
@@ -80,9 +86,11 @@ open class Fetcher<ResponseType: Codable, RecordType: Codable> {
             let nextValuesEmpty = self.nextQueryItems.isEmpty && self.nextQueryItems.isEmpty
 
             // convert data to records
-            let newRecords = self.responseToRecords(response: response)
+            let newRecords = self
+                .responseToRecords(response: response)
+                .unique
 
-            // no more records or next records, then everything has been fetched...
+            // if no additional records, then everything has been fetched...
             if newRecords.isEmpty || nextValuesEmpty {
                 self._fetchedAllRecords = true
             }
