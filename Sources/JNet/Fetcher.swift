@@ -1,8 +1,8 @@
 import Foundation
 
-// MARK: - UUIDIdentifiable: Codable
+// MARK: - UUIDCodable: Codable
 
-public protocol UUIDIdentifiable: Codable {
+public protocol UUIDCodable: Codable {
     var id: UUID { get }
 }
 
@@ -11,7 +11,7 @@ public protocol UUIDIdentifiable: Codable {
 public protocol FetcherDelegate: AnyObject {
     func fetcherStarted(fetcherTag: Int, firstPage: Bool)
     func fetcherFetchedNewRecords(fetcherTag: Int,
-                                  records: [UUIDIdentifiable],
+                                  records: [UUIDCodable],
                                   firstPage: Bool,
                                   fetchedAllRecords: Bool)
     func fetcherFailed(fetcherTag: Int, statusCode: Int, error: Error)
@@ -20,7 +20,7 @@ public protocol FetcherDelegate: AnyObject {
 // MARK: - Fetcher
 
 /// An object which abstracts away the complexity of requesting data from (paginated) API endpoints.
-open class Fetcher<ResponseType: Codable, RecordType: UUIDIdentifiable> {
+open class Fetcher<ResponseType: Codable, RecordType: UUIDCodable> {
 
     // MARK: Properties
 

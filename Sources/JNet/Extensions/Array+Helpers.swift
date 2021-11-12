@@ -2,7 +2,7 @@ import Foundation
 
 // MARK: - Array (Helpers)
 
-extension Array where Element: UUIDIdentifiable {
+extension Array where Element: UUIDCodable {
     /// Returns unique elements identified by their UUID.
     public var unique: [Element] {
         var uniqueValues: [Element] = []

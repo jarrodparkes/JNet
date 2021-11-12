@@ -19,7 +19,7 @@ struct PokemonResult<T: Codable>: Codable {
 
 // MARK: - Pokemon
 
-struct Pokemon: UUIDIdentifiable {
+struct Pokemon: UUIDCodable {
     let name: String
     let url: String
 

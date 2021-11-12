@@ -19,7 +19,7 @@ struct StarWarsResult<T: Codable>: Codable {
 
 // MARK: - StarWarsPerson
 
-struct StarWarsPerson: UUIDIdentifiable {
+struct StarWarsPerson: UUIDCodable {
     let name, height, mass, hairColor: String
     let skinColor, eyeColor, birthYear: String
     let gender: StarWarsGender
