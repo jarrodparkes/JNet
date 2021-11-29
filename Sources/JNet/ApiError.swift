@@ -24,6 +24,7 @@ extension ApiError: LocalizedError {
         case .mockError: return "It's an unhappy path mock error!"
         case .unableToLoad: return "Unable to load"
         case .unexpectedStatusCode(let code): return "Unexpected status code: \(code)"
+        case .decodingError(let error): return "Decoding error: \(error.localizedDescription)"
         case .none: return "I haven't been implemented yet!"
         default: return nil
         }
