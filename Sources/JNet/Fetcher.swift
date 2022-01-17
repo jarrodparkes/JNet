@@ -120,7 +120,7 @@ open class Fetcher<ResponseType: Codable, RecordType: UUIDCodable> {
     // MARK: Request
 
     private func nextRequest() -> URLRequest? {
-        let urlRequest = coreRequest.urlRequest(forApi: api)
+        let urlRequest = getCoreRequest(request: coreRequest, api: api)
 
         if let url = urlRequest?.url,
            var components = URLComponents(url: url, resolvingAgainstBaseURL: false) {
@@ -134,15 +134,18 @@ open class Fetcher<ResponseType: Codable, RecordType: UUIDCodable> {
 
             if let nextUrl = components.url {
                 var nextRequest = URLRequest(url: nextUrl)
+
                 urlRequest?.allHTTPHeaderFields?.forEach { (key, value) in
                     nextRequest.addValue(value, forHTTPHeaderField: key)
                 }
+
                 nextHTTPHeaders.forEach { (key, value) in
                     if let value = value {
                         nextRequest.addValue(value, forHTTPHeaderField: key)
                     }
                 }
-                return finalizeUrlRequest(urlRequest: nextRequest, api: api)
+
+                return nextRequest
             } else {
                 return nil
             }
@@ -183,14 +186,13 @@ open class Fetcher<ResponseType: Codable, RecordType: UUIDCodable> {
 
     // MARK: Extension Points
 
-    /// A callback which gives the fetcher a final chance to modify the URL request prior to
-    /// it being issued.
+    /// A callback for returning the core URL request.
     /// - Parameters:
-    ///   - urlRequest: A URL request.
+    ///   - request: A request object.
     ///   - api: An API with its own specific URL components.
-    /// - Returns: The finalized URL request.
-    open func finalizeUrlRequest(urlRequest: URLRequest, api: ApiJsonable) -> URLRequest {
-        return urlRequest
+    /// - Returns: The core URL request.
+    open func getCoreRequest(request: Request, api: ApiJsonable) -> URLRequest? {
+        return request.urlRequest(forApi: api)
     }
 
     /// Extracts an array of records from the top-level response. This is useful is an api endpoint
