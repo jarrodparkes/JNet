@@ -24,7 +24,7 @@ open class Fetcher<ResponseType: Codable, RecordType: UUIDCodable> {
 
     // MARK: Properties
 
-    private let api: APIJsonable
+    private let api: ApiJsonable
 
     private var coreRequest: Request
     private var currentRequest: FetchOperation?
@@ -57,11 +57,11 @@ open class Fetcher<ResponseType: Codable, RecordType: UUIDCodable> {
 
     // MARK: Initializer
 
-    /// Creates a `Fetcher` for a specific `APIJsonable` path represented by `Request`.
+    /// Creates a `Fetcher` for a specific `ApiJsonable` path represented by `Request`.
     /// - Parameters:
     ///   - api: An API identified by its base URL components.
     ///   - coreRequest: An API request, or endpoint, and its URL components.
-    public init(api: APIJsonable, coreRequest: Request) {
+    public init(api: ApiJsonable, coreRequest: Request) {
         self.api = api
         self.coreRequest = coreRequest
     }
@@ -120,7 +120,7 @@ open class Fetcher<ResponseType: Codable, RecordType: UUIDCodable> {
     // MARK: Request
 
     private func nextRequest() -> URLRequest? {
-        let urlRequest = coreRequest.urlRequest(forAPI: api)
+        let urlRequest = coreRequest.urlRequest(forApi: api)
 
         if let url = urlRequest?.url,
            var components = URLComponents(url: url, resolvingAgainstBaseURL: false) {
@@ -142,7 +142,7 @@ open class Fetcher<ResponseType: Codable, RecordType: UUIDCodable> {
                         nextRequest.addValue(value, forHTTPHeaderField: key)
                     }
                 }
-                return nextRequest
+                return finalizeUrlRequest(urlRequest: nextRequest, api: api)
             } else {
                 return nil
             }
@@ -182,6 +182,16 @@ open class Fetcher<ResponseType: Codable, RecordType: UUIDCodable> {
     }
 
     // MARK: Extension Points
+
+    /// A callback which gives the fetcher a final chance to modify the URL request prior to
+    /// it being issued.
+    /// - Parameters:
+    ///   - urlRequest: A URL request.
+    ///   - api: An API with its own specific URL components.
+    /// - Returns: The finalized URL request.
+    open func finalizeUrlRequest(urlRequest: URLRequest, api: ApiJsonable) -> URLRequest {
+        return urlRequest
+    }
 
     /// Extracts an array of records from the top-level response. This is useful is an api endpoint
     /// returns a top-level JSON object containing an underlying array of objects.

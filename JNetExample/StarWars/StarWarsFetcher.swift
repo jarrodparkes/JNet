@@ -15,7 +15,7 @@ class StarWarsFetcher: Fetcher<StarWarsResult<StarWarsPerson>, StarWarsPerson> {
     // MARK: Initializer
 
     init() {
-        super.init(api: StarWarsAPI(), coreRequest: StarWarsRequest.people)
+        super.init(api: StarWarsApi(), coreRequest: StarWarsRequest.people)
     }
 
     // MARK: Fetcher

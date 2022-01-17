@@ -55,11 +55,11 @@ public extension Request {
     /// components like scheme, host, and headers.
     /// - Parameter api: An API with its own specific URL components.
     /// - Returns: A `URLRequest`, if possible.
-    func urlRequest(forAPI api: ApiDiscoverable) -> URLRequest? {
+    func urlRequest(forApi api: ApiDiscoverable) -> URLRequest? {
         var request: URLRequest?
 
         // build request...
-        if let url = urlComponents(forAPI: api).url {
+        if let url = urlComponents(forApi: api).url {
             var urlRequest = URLRequest(url: url)
 
             // method...
@@ -82,7 +82,7 @@ public extension Request {
         return request
     }
 
-    private func urlComponents(forAPI api: ApiDiscoverable) -> URLComponents {
+    private func urlComponents(forApi api: ApiDiscoverable) -> URLComponents {
         var components = URLComponents()
         components.scheme = api.scheme
         components.host = api.host

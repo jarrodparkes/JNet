@@ -25,11 +25,11 @@
 		A9188DDC26FCBE78002D312C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DDB26FCBE78002D312C /* main.swift */; };
 		A9188DE126FCBE80002D312C /* JNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "JNet::JNet::Product" /* JNet.framework */; };
 		A9188DE226FCBE80002D312C /* JNet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "JNet::JNet::Product" /* JNet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A9188DE926FCC3BE002D312C /* PokemonAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DE826FCC3BE002D312C /* PokemonAPI.swift */; };
+		A9188DE926FCC3BE002D312C /* PokemonApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DE826FCC3BE002D312C /* PokemonApi.swift */; };
 		A9188DEB26FCC3D8002D312C /* PokemonRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DEA26FCC3D8002D312C /* PokemonRequest.swift */; };
 		A9188DED26FCC3F3002D312C /* PokemonFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DEC26FCC3F3002D312C /* PokemonFetcher.swift */; };
 		A9188DEF26FCC408002D312C /* PokemonModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DEE26FCC408002D312C /* PokemonModels.swift */; };
-		A9188DF226FCC46E002D312C /* StarWarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DF126FCC46E002D312C /* StarWarsAPI.swift */; };
+		A9188DF226FCC46E002D312C /* StarWarsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DF126FCC46E002D312C /* StarWarsApi.swift */; };
 		A9188DF426FCC475002D312C /* StarWarsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DF326FCC475002D312C /* StarWarsRequest.swift */; };
 		A9188DF626FCC47C002D312C /* StarWarsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DF526FCC47C002D312C /* StarWarsFetcher.swift */; };
 		A9188DF826FCC484002D312C /* StarWarsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DF726FCC484002D312C /* StarWarsModels.swift */; };
@@ -104,11 +104,11 @@
 		A9188DD926FCBE78002D312C /* JNetExample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = JNetExample; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9188DDB26FCBE78002D312C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A9188DE626FCBF24002D312C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9188DE826FCC3BE002D312C /* PokemonAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonAPI.swift; sourceTree = "<group>"; };
+		A9188DE826FCC3BE002D312C /* PokemonApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonApi.swift; sourceTree = "<group>"; };
 		A9188DEA26FCC3D8002D312C /* PokemonRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRequest.swift; sourceTree = "<group>"; };
 		A9188DEC26FCC3F3002D312C /* PokemonFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonFetcher.swift; sourceTree = "<group>"; };
 		A9188DEE26FCC408002D312C /* PokemonModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonModels.swift; sourceTree = "<group>"; };
-		A9188DF126FCC46E002D312C /* StarWarsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsAPI.swift; sourceTree = "<group>"; };
+		A9188DF126FCC46E002D312C /* StarWarsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsApi.swift; sourceTree = "<group>"; };
 		A9188DF326FCC475002D312C /* StarWarsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsRequest.swift; sourceTree = "<group>"; };
 		A9188DF526FCC47C002D312C /* StarWarsFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsFetcher.swift; sourceTree = "<group>"; };
 		A9188DF726FCC484002D312C /* StarWarsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsModels.swift; sourceTree = "<group>"; };
@@ -182,7 +182,7 @@
 		A9188DE726FCC3B3002D312C /* Pokemon */ = {
 			isa = PBXGroup;
 			children = (
-				A9188DE826FCC3BE002D312C /* PokemonAPI.swift */,
+				A9188DE826FCC3BE002D312C /* PokemonApi.swift */,
 				A9188DEA26FCC3D8002D312C /* PokemonRequest.swift */,
 				A9188DEC26FCC3F3002D312C /* PokemonFetcher.swift */,
 				A9188DEE26FCC408002D312C /* PokemonModels.swift */,
@@ -193,7 +193,7 @@
 		A9188DF026FCC45D002D312C /* StarWars */ = {
 			isa = PBXGroup;
 			children = (
-				A9188DF126FCC46E002D312C /* StarWarsAPI.swift */,
+				A9188DF126FCC46E002D312C /* StarWarsApi.swift */,
 				A9188DF326FCC475002D312C /* StarWarsRequest.swift */,
 				A9188DF526FCC47C002D312C /* StarWarsFetcher.swift */,
 				A9188DF726FCC484002D312C /* StarWarsModels.swift */,
@@ -431,9 +431,9 @@
 				A9188DF626FCC47C002D312C /* StarWarsFetcher.swift in Sources */,
 				A9188DF426FCC475002D312C /* StarWarsRequest.swift in Sources */,
 				A9188DEF26FCC408002D312C /* PokemonModels.swift in Sources */,
-				A9188DE926FCC3BE002D312C /* PokemonAPI.swift in Sources */,
+				A9188DE926FCC3BE002D312C /* PokemonApi.swift in Sources */,
 				A9188DED26FCC3F3002D312C /* PokemonFetcher.swift in Sources */,
-				A9188DF226FCC46E002D312C /* StarWarsAPI.swift in Sources */,
+				A9188DF226FCC46E002D312C /* StarWarsApi.swift in Sources */,
 				A9188DDC26FCBE78002D312C /* main.swift in Sources */,
 				A9188DEB26FCC3D8002D312C /* PokemonRequest.swift in Sources */,
 			);

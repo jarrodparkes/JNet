@@ -1,5 +1,5 @@
 //
-//  StarWarsAPI.swift
+//  PokemonApi.swift
 //  JNetExample
 //
 //  Created by Jarrod Parkes on 9/23/21.
@@ -8,9 +8,9 @@
 import Foundation
 import JNet
 
-// MARK: - StarWarsAPI
+// MARK: - PokemonApi
 
-class StarWarsAPI: APIJsonable {
+class PokemonApi: ApiJsonable {
     let session = URLSession(configuration: .ephemeral)
     let queue = OperationQueue()
 
@@ -45,8 +45,8 @@ class StarWarsAPI: APIJsonable {
     }
 
     var scheme: String { return "https" }
-    var host: String { return "swapi.dev" }
-    var subPath: String? { return "api" }
+    var host: String { return "pokeapi.co" }
+    var subPath: String? { return "api/v2" }
     var httpHeaderFields: [String: String] { return [:] }
     var dateEncodingStrategy: JSONEncoder.DateEncodingStrategy { return .deferredToDate }
 }

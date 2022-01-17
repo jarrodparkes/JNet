@@ -11,9 +11,9 @@ public protocol ApiDiscoverable: AnyObject {
     var dateEncodingStrategy: JSONEncoder.DateEncodingStrategy { get }
 }
 
-// MARK: - APIJsonable: ApiDiscoverable
+// MARK: - ApiJsonable: ApiDiscoverable
 
-public protocol APIJsonable: ApiDiscoverable {
+public protocol ApiJsonable: ApiDiscoverable {
     func request<T: Codable>(_ request: URLRequest,
                              success: ((T) -> Void)?,
                              failure: RequestFailure) -> FetchOperation?
@@ -23,10 +23,10 @@ public protocol APIJsonable: ApiDiscoverable {
                              failure: RequestFailure) -> FetchOperation?
 }
 
-// MARK: - APIJsonable (Defaults)
+// MARK: - ApiJsonable (Defaults)
 
-extension APIJsonable {
-    /// Starts an API request and returns the queued `FetchOperation`.
+extension ApiJsonable {
+    /// Starts an Api request and returns the queued `FetchOperation`.
     /// - Parameters:
     ///   - request: Defines the components of the HTTP request.
     ///   - success: Handler if the HTTP request succeeds.
@@ -37,7 +37,7 @@ extension APIJsonable {
     public func request<T: Codable>(_ request: Request,
                                     success: ((T) -> Void)?,
                                     failure: RequestFailure) -> FetchOperation? {
-        if let urlRequest = request.urlRequest(forAPI: self) {
+        if let urlRequest = request.urlRequest(forApi: self) {
             return self.request(urlRequest, success: success, failure: failure)
         } else {
             return nil

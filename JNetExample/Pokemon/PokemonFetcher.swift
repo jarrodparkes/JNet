@@ -15,7 +15,7 @@ class PokemonFetcher: Fetcher<PokemonResult<Pokemon>, Pokemon> {
     // MARK: Initializer
 
     init() {
-        super.init(api: PokemonAPI(), coreRequest: PokemonRequest.pokemon)
+        super.init(api: PokemonApi(), coreRequest: PokemonRequest.pokemon)
     }
 
     // MARK: Fetcher
