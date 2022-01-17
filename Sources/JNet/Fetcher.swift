@@ -120,7 +120,7 @@ open class Fetcher<ResponseType: Codable, RecordType: UUIDCodable> {
     // MARK: Request
 
     private func nextRequest() -> URLRequest? {
-        let urlRequest = getCoreRequest(request: coreRequest, api: api)
+        let urlRequest = computeUrlRequest()
 
         if let url = urlRequest?.url,
            var components = URLComponents(url: url, resolvingAgainstBaseURL: false) {
@@ -186,13 +186,11 @@ open class Fetcher<ResponseType: Codable, RecordType: UUIDCodable> {
 
     // MARK: Extension Points
 
-    /// A callback for returning the core URL request.
-    /// - Parameters:
-    ///   - request: A request object.
-    ///   - api: An API with its own specific URL components.
-    /// - Returns: The core URL request.
-    open func getCoreRequest(request: Request, api: ApiJsonable) -> URLRequest? {
-        return request.urlRequest(forApi: api)
+    /// Compute the core URL request. Next request headers and parameters will be applied after this
+    /// called.
+    /// - Returns: A URL request.
+    open func computeUrlRequest() -> URLRequest? {
+        return coreRequest.urlRequest(forApi: api)
     }
 
     /// Extracts an array of records from the top-level response. This is useful is an api endpoint
