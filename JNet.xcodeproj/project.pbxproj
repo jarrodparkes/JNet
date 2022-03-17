@@ -277,9 +277,9 @@
 			children = (
 				OBJ_9 /* ApiDiscoverable.swift */,
 				OBJ_10 /* ApiError.swift */,
+				A914798526FB6FE700A9CA80 /* Fetcher.swift */,
 				OBJ_15 /* HttpMethod.swift */,
 				OBJ_21 /* Request.swift */,
-				A914798526FB6FE700A9CA80 /* Fetcher.swift */,
 				OBJ_11 /* Extensions */,
 				OBJ_16 /* Operations */,
 			);

@@ -57,7 +57,7 @@ open class Fetcher<ResponseType: Codable, RecordType: UUIDCodable> {
 
     // MARK: Initializer
 
-    /// Creates a `Fetcher` for a specific `ApiJsonable` path represented by `Request`.
+    /// Creates a `Fetcher` for a specific `ApiJsonable` path represented by a `Request`.
     /// - Parameters:
     ///   - api: An API identified by its base URL components.
     ///   - coreRequest: An API request, or endpoint, and its URL components.

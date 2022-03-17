@@ -1,3 +1,3 @@
 # JNet
 
-A description of this package.
+Core network utilities for Swift applications.
