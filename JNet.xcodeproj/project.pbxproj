@@ -21,7 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		A914798626FB6FE700A9CA80 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914798526FB6FE700A9CA80 /* Fetcher.swift */; };
+		A914798626FB6FE700A9CA80 /* PagingFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914798526FB6FE700A9CA80 /* PagingFetcher.swift */; };
 		A9188DDC26FCBE78002D312C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DDB26FCBE78002D312C /* main.swift */; };
 		A9188DE126FCBE80002D312C /* JNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "JNet::JNet::Product" /* JNet.framework */; };
 		A9188DE226FCBE80002D312C /* JNet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "JNet::JNet::Product" /* JNet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -31,10 +31,13 @@
 		A9188DEF26FCC408002D312C /* PokemonModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DEE26FCC408002D312C /* PokemonModels.swift */; };
 		A9188DF226FCC46E002D312C /* StarWarsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DF126FCC46E002D312C /* StarWarsApi.swift */; };
 		A9188DF426FCC475002D312C /* StarWarsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DF326FCC475002D312C /* StarWarsRequest.swift */; };
-		A9188DF626FCC47C002D312C /* StarWarsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DF526FCC47C002D312C /* StarWarsFetcher.swift */; };
+		A9188DF626FCC47C002D312C /* StarWarsPagingFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DF526FCC47C002D312C /* StarWarsPagingFetcher.swift */; };
 		A9188DF826FCC484002D312C /* StarWarsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9188DF726FCC484002D312C /* StarWarsModels.swift */; };
+		A9220DD727E66FAB0024443D /* StarWarsPollingFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9220DD627E66FAB0024443D /* StarWarsPollingFetcher.swift */; };
 		A948F2D62729F05A00E427E3 /* FetcherLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A948F2D52729F05A00E427E3 /* FetcherLogger.swift */; };
 		A95C6B04273EC8FD0066ADA9 /* Array+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95C6B03273EC8FD0066ADA9 /* Array+Helpers.swift */; };
+		A9E7463C27E5192B006ED656 /* UUIDCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E7463B27E5192B006ED656 /* UUIDCodable.swift */; };
+		A9E7463E27E51A8B006ED656 /* PollingFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E7463D27E51A8B006ED656 /* PollingFetcher.swift */; };
 		OBJ_35 /* ApiDiscoverable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* ApiDiscoverable.swift */; };
 		OBJ_36 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* ApiError.swift */; };
 		OBJ_37 /* Data+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Data+Helpers.swift */; };
@@ -100,7 +103,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A914798526FB6FE700A9CA80 /* Fetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
+		A914798526FB6FE700A9CA80 /* PagingFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingFetcher.swift; sourceTree = "<group>"; };
 		A9188DD926FCBE78002D312C /* JNetExample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = JNetExample; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9188DDB26FCBE78002D312C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		A9188DE626FCBF24002D312C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -110,10 +113,13 @@
 		A9188DEE26FCC408002D312C /* PokemonModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonModels.swift; sourceTree = "<group>"; };
 		A9188DF126FCC46E002D312C /* StarWarsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsApi.swift; sourceTree = "<group>"; };
 		A9188DF326FCC475002D312C /* StarWarsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsRequest.swift; sourceTree = "<group>"; };
-		A9188DF526FCC47C002D312C /* StarWarsFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsFetcher.swift; sourceTree = "<group>"; };
+		A9188DF526FCC47C002D312C /* StarWarsPagingFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsPagingFetcher.swift; sourceTree = "<group>"; };
 		A9188DF726FCC484002D312C /* StarWarsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsModels.swift; sourceTree = "<group>"; };
+		A9220DD627E66FAB0024443D /* StarWarsPollingFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarWarsPollingFetcher.swift; sourceTree = "<group>"; };
 		A948F2D52729F05A00E427E3 /* FetcherLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherLogger.swift; sourceTree = "<group>"; };
 		A95C6B03273EC8FD0066ADA9 /* Array+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Helpers.swift"; sourceTree = "<group>"; };
+		A9E7463B27E5192B006ED656 /* UUIDCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UUIDCodable.swift; sourceTree = "<group>"; };
+		A9E7463D27E51A8B006ED656 /* PollingFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollingFetcher.swift; sourceTree = "<group>"; };
 		"JNet::JNet::Product" /* JNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = JNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"JNet::JNetTests::Product" /* JNetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = JNetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
@@ -195,7 +201,8 @@
 			children = (
 				A9188DF126FCC46E002D312C /* StarWarsApi.swift */,
 				A9188DF326FCC475002D312C /* StarWarsRequest.swift */,
-				A9188DF526FCC47C002D312C /* StarWarsFetcher.swift */,
+				A9188DF526FCC47C002D312C /* StarWarsPagingFetcher.swift */,
+				A9220DD627E66FAB0024443D /* StarWarsPollingFetcher.swift */,
 				A9188DF726FCC484002D312C /* StarWarsModels.swift */,
 			);
 			path = StarWars;
@@ -277,9 +284,11 @@
 			children = (
 				OBJ_9 /* ApiDiscoverable.swift */,
 				OBJ_10 /* ApiError.swift */,
-				A914798526FB6FE700A9CA80 /* Fetcher.swift */,
 				OBJ_15 /* HttpMethod.swift */,
+				A914798526FB6FE700A9CA80 /* PagingFetcher.swift */,
+				A9E7463D27E51A8B006ED656 /* PollingFetcher.swift */,
 				OBJ_21 /* Request.swift */,
+				A9E7463B27E5192B006ED656 /* UUIDCodable.swift */,
 				OBJ_11 /* Extensions */,
 				OBJ_16 /* Operations */,
 			);
@@ -365,7 +374,7 @@
 			attributes = {
 				LastSwiftMigration = 9999;
 				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1310;
+				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					A9188DD826FCBE78002D312C = {
 						CreatedOnToolsVersion = 12.5;
@@ -417,7 +426,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint autocorrect\n    swiftlint\nelse\n    echo \"warning: SwiftLint is not installed, please download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "# Adds support for Apple Silicon brew directory\n# stackoverflow.com/q/65991508\nexport PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n    swiftlint --fix\n    swiftlint\nelse\n    echo \"warning: SwiftLint is not installed, please download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -428,7 +437,7 @@
 			files = (
 				A9188DF826FCC484002D312C /* StarWarsModels.swift in Sources */,
 				A948F2D62729F05A00E427E3 /* FetcherLogger.swift in Sources */,
-				A9188DF626FCC47C002D312C /* StarWarsFetcher.swift in Sources */,
+				A9188DF626FCC47C002D312C /* StarWarsPagingFetcher.swift in Sources */,
 				A9188DF426FCC475002D312C /* StarWarsRequest.swift in Sources */,
 				A9188DEF26FCC408002D312C /* PokemonModels.swift in Sources */,
 				A9188DE926FCC3BE002D312C /* PokemonApi.swift in Sources */,
@@ -436,6 +445,7 @@
 				A9188DF226FCC46E002D312C /* StarWarsApi.swift in Sources */,
 				A9188DDC26FCBE78002D312C /* main.swift in Sources */,
 				A9188DEB26FCC3D8002D312C /* PokemonRequest.swift in Sources */,
+				A9220DD727E66FAB0024443D /* StarWarsPollingFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,15 +454,17 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_35 /* ApiDiscoverable.swift in Sources */,
+				A9E7463C27E5192B006ED656 /* UUIDCodable.swift in Sources */,
 				OBJ_36 /* ApiError.swift in Sources */,
 				OBJ_37 /* Data+Helpers.swift in Sources */,
 				OBJ_38 /* HTTPURLResponse+Helpers.swift in Sources */,
 				OBJ_39 /* URLSession+Helpers.swift in Sources */,
 				A95C6B04273EC8FD0066ADA9 /* Array+Helpers.swift in Sources */,
-				A914798626FB6FE700A9CA80 /* Fetcher.swift in Sources */,
+				A914798626FB6FE700A9CA80 /* PagingFetcher.swift in Sources */,
 				OBJ_40 /* HttpMethod.swift in Sources */,
 				OBJ_41 /* BaseOperation.swift in Sources */,
 				OBJ_42 /* FetchOperation.swift in Sources */,
+				A9E7463E27E51A8B006ED656 /* PollingFetcher.swift in Sources */,
 				OBJ_43 /* ParseOperation.swift in Sources */,
 				OBJ_44 /* UploadOperation.swift in Sources */,
 				OBJ_45 /* Request.swift in Sources */,
@@ -551,7 +563,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/JNetExample/Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MARKETING_VERSION = 1.0.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -612,7 +624,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/JNetExample/Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MARKETING_VERSION = 1.0.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -693,7 +705,7 @@
 				INFOPLIST_FILE = JNet.xcodeproj/JNet_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MARKETING_VERSION = 1.2.0;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -728,7 +740,7 @@
 				INFOPLIST_FILE = JNet.xcodeproj/JNet_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MARKETING_VERSION = 1.2.0;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -802,6 +814,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -package-description-version 5.3.0";
 				SWIFT_VERSION = 5.0;
 			};
@@ -811,6 +824,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk -package-description-version 5.3.0";
 				SWIFT_VERSION = 5.0;
 			};

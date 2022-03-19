@@ -7,22 +7,34 @@
 
 import JNet
 
-// MARK: - FetcherLogger: FetcherDelegate
+// MARK: - FetcherLogger: PagingFetcherDelegate
 
-class FetcherLogger: FetcherDelegate {
-    func fetcherStarted(fetcherTag: Int, firstPage: Bool) {
-        print("started:fetcherTag:\(fetcherTag):firstPage:\(firstPage)")
+class FetcherLogger: PagingFetcherDelegate {
+    func pagingFetcherStarted(tag: Int, firstPage: Bool) {
+        print("started:tag:\(tag):firstPage:\(firstPage)")
     }
 
-    func fetcherFetchedNewRecords(fetcherTag: Int,
-                                  records: [UUIDCodable],
-                                  firstPage: Bool,
-                                  fetchedAllRecords: Bool) {
-        print("newRecords:fetcherTag:\(fetcherTag):records:\(records):" +
+    func pagingFetcherFetchedNewRecords(tag: Int,
+                                        records: [UUIDCodable],
+                                        firstPage: Bool,
+                                        fetchedAllRecords: Bool) {
+        print("newRecords:tag:\(tag):records:\(records):" +
                 "firstPage:\(firstPage):fetchedAllRecords:\(fetchedAllRecords)")
     }
 
-    func fetcherFailed(fetcherTag: Int, statusCode: Int, error: Error) {
-        print("failed:fetcherTag:\(fetcherTag):statusCode:\(statusCode):error:\(error)")
+    func pagingFetcherFailed(tag: Int, statusCode: Int, error: Error) {
+        print("failed:tag:\(tag):statusCode:\(statusCode):error:\(error)")
+    }
+}
+
+// MARK: - FetcherLogger: PollingFetcherDelegate
+
+extension FetcherLogger: PollingFetcherDelegate {
+    func pollingFetcherFailed(tag: Int, statusCode: Int, error: Error) {
+        print("failed:tag:\(tag):statusCode:\(statusCode):error:\(error)")
+    }
+
+    func pollingFetcherFetchedResponse(tag: Int, record: Codable) {
+        print("response:tag:\(tag):record:\(record)")
     }
 }

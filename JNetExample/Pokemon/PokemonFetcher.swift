@@ -10,7 +10,7 @@ import JNet
 
 // MARK: - PokemonFetcher
 
-class PokemonFetcher: Fetcher<PokemonResult<Pokemon>, Pokemon> {
+class PokemonFetcher: PagingFetcher<PokemonResult<Pokemon>, Pokemon> {
 
     // MARK: Initializer
 

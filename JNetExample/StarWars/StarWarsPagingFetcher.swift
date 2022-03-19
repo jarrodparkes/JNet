@@ -1,5 +1,5 @@
 //
-//  StarWarsFetcher.swift
+//  StarWarsPagingFetcher.swift
 //  JNetExample
 //
 //  Created by Jarrod Parkes on 9/23/21.
@@ -8,9 +8,9 @@
 import Foundation
 import JNet
 
-// MARK: - StarWarsFetcher
+// MARK: - StarWarsPagingFetcher
 
-class StarWarsFetcher: Fetcher<StarWarsResult<StarWarsPerson>, StarWarsPerson> {
+class StarWarsPagingFetcher: PagingFetcher<StarWarsResult<StarWarsPerson>, StarWarsPerson> {
 
     // MARK: Initializer
 

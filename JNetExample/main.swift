@@ -14,9 +14,14 @@ let fetcherLogger = FetcherLogger()
 // pokemonFetcher.tag = 1
 // pokemonFetcher.fetch()
 
-let starWarsFetcher = StarWarsFetcher()
-starWarsFetcher.delegate = fetcherLogger
-starWarsFetcher.tag = 2
-starWarsFetcher.fetch()
+// let starWarsPagingFetcher = StarWarsPagingFetcher()
+// starWarsPagingFetcher.delegate = fetcherLogger
+// starWarsPagingFetcher.tag = 2
+// starWarsPagingFetcher.fetch()
+
+let starWarsPollingFetcher = StarWarsPollingFetcher()
+starWarsPollingFetcher.delegate = fetcherLogger
+starWarsPollingFetcher.tag = 3
+starWarsPollingFetcher.fetch()
 
 RunLoop.main.run()

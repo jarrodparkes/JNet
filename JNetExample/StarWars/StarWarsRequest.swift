@@ -12,22 +12,24 @@ import JNet
 
 enum StarWarsRequest: Request {
     case people
+    case peopleId(Int)
 
     var path: String {
         switch self {
         case .people: return "people"
+        case .peopleId(let id): return "people/\(id)"
         }
     }
 
     var responseType: Decodable.Type {
         switch self {
-        case .people: return StarWarsResult<StarWarsPerson>.self
+        case .people, .peopleId: return StarWarsResult<StarWarsPerson>.self
         }
     }
 
     var httpMethod: HttpMethod {
         switch self {
-        case .people: return .get
+        case .people, .peopleId: return .get
         }
     }
 

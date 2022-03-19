@@ -1,26 +1,20 @@
 import Foundation
 
-// MARK: - UUIDCodable: Codable
+// MARK: - PagingFetcherDelegate
 
-public protocol UUIDCodable: Codable {
-    var id: UUID { get }
+public protocol PagingFetcherDelegate: AnyObject {
+    func pagingFetcherFailed(tag: Int, statusCode: Int, error: Error)
+    func pagingFetcherFetchedNewRecords(tag: Int,
+                                        records: [UUIDCodable],
+                                        firstPage: Bool,
+                                        fetchedAllRecords: Bool)
+    func pagingFetcherStarted(tag: Int, firstPage: Bool)
 }
 
-// MARK: - FetcherDelegate
+// MARK: - PagingFetcher
 
-public protocol FetcherDelegate: AnyObject {
-    func fetcherStarted(fetcherTag: Int, firstPage: Bool)
-    func fetcherFetchedNewRecords(fetcherTag: Int,
-                                  records: [UUIDCodable],
-                                  firstPage: Bool,
-                                  fetchedAllRecords: Bool)
-    func fetcherFailed(fetcherTag: Int, statusCode: Int, error: Error)
-}
-
-// MARK: - Fetcher
-
-/// An object which abstracts away the complexity of requesting data from (paginated) API endpoints.
-open class Fetcher<ResponseType: Codable, RecordType: UUIDCodable> {
+/// An object which abstracts away the complexity of requesting data from paginated API endpoints.
+open class PagingFetcher<ResponseType: Codable, RecordType: UUIDCodable> {
 
     // MARK: Properties
 
@@ -49,15 +43,15 @@ open class Fetcher<ResponseType: Codable, RecordType: UUIDCodable> {
         }
     }
 
-    /// An object that can handle fetch callbacks.
-    public weak var delegate: FetcherDelegate?
+    /// An object that can handle the callbacks.
+    public weak var delegate: PagingFetcherDelegate?
 
     /// An identifying tag.
     public var tag: Int = 0
 
     // MARK: Initializer
 
-    /// Creates a `Fetcher` for a specific `ApiJsonable` path represented by a `Request`.
+    /// Creates a `PagingFetcher` for a specific `ApiJsonable` path represented by a `Request`.
     /// - Parameters:
     ///   - api: An API identified by its base URL components.
     ///   - coreRequest: An API request, or endpoint, and its URL components.
@@ -202,7 +196,7 @@ open class Fetcher<ResponseType: Codable, RecordType: UUIDCodable> {
     /// A callback when a new fetch starts.
     /// - Parameter firstPage: Is this fetch for the first page of records?
     open func fetchStarted(firstPage: Bool) {
-        delegate?.fetcherStarted(fetcherTag: tag, firstPage: firstPage)
+        delegate?.pagingFetcherStarted(tag: tag, firstPage: firstPage)
     }
 
     /// A callback when new records have been fetched.
@@ -210,10 +204,10 @@ open class Fetcher<ResponseType: Codable, RecordType: UUIDCodable> {
     ///   - records: An array of newly fetched records.
     ///   - firstPage: Is this fetch for the first page of records?
     open func fetchedNewRecords(records: [RecordType], firstPage: Bool) {
-        delegate?.fetcherFetchedNewRecords(fetcherTag: tag,
-                                           records: records,
-                                           firstPage: firstPage,
-                                           fetchedAllRecords: fetchedAllRecords)
+        delegate?.pagingFetcherFetchedNewRecords(tag: tag,
+                                                 records: records,
+                                                 firstPage: firstPage,
+                                                 fetchedAllRecords: fetchedAllRecords)
     }
 
     /// A callback when a fetch fails.
@@ -221,7 +215,7 @@ open class Fetcher<ResponseType: Codable, RecordType: UUIDCodable> {
     ///   - statusCode: The HTTP status code for the failure (e.g. 422).
     ///   - error: The error for the failure.
     open func fetchFailed(statusCode: Int, error: Error) {
-        delegate?.fetcherFailed(fetcherTag: tag, statusCode: statusCode, error: error)
+        delegate?.pagingFetcherFailed(tag: tag, statusCode: statusCode, error: error)
     }
 
     /// Returns a dictionary of key/value pairs that will be used to set/override HTTP headers
